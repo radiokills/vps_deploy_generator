@@ -1,0 +1,14 @@
+Description:
+    This generator creates configuration for capistrano, unicorn and ngnix deployment
+
+Example:
+    rails generate deploy_configuration  myBlog 70.80.91.101 blog.mydomain.com myUser git@github:./myrepo/myapp
+
+    This will create:
+        config/capistrano.rb
+        config/database.example.yml
+        config/deploy.yml
+        config/nginx.conf
+        config/unicorn.rb
+        config/unicorn_init.sh
+
