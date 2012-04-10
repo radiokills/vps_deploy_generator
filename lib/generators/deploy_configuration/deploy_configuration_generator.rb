@@ -28,24 +28,36 @@ class DeployConfigurationGenerator < Rails::Generators::Base
 YOUR CONFIG FILES WERE GENERATED
 ***************************************
 Now you should:
-	1. Add new files to git
+	1. Set executable flags on unicorn_init.sh script
+	
+		chmod +x config/unicorn_init.sh
+	
+	------------------------------------------------------
+	2. Add new files to git
 	
 		git add .
 		git commit -a -m 'Deployment config files'
 		git push origin master
 
-	2. Setup deploy
+	------------------------------------------------------
+	3. Setup deploy
+		
 		cap deploy:setup
 
-	3. Edit database configuration
+	------------------------------------------------------
+	4. Edit database configuration
+		
 		ssh #{server_username}@#{app_server}
 		cd apps/#{app_name}/shared/config
 		nano database.yml
-	
-	4. Log off your server and Deploy app
+	------------------------------------------------------
+	5. Log off your server and Deploy app
+		
 		cap deploy:cold
 
-	5. ssh to your server again and update rc.d
+	------------------------------------------------------
+	6. ssh to your server again and update rc.d
+		
 		ssh #{server_username}@#{app_server}
 		sudo update-rc.d unicorn_#{app_name} defaults
 		}
