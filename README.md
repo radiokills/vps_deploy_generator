@@ -13,19 +13,25 @@ for example:
 `rails generate deploy_configuration  myBlog 70.80.91.101 blog.mydomain.com myUser git@github:./myrepo/myapp`
 
 It will create following files:
-+ 	config/capistrano.rb
-+ 	config/database.example.yml
-+ 	config/deploy.yml
-+ 	config/nginx.conf
-+ 	config/unicorn.rb
-+ 	config/unicorn_init.sh
+
+- 	config/capistrano.rb
+
+- 	config/database.example.yml
+
+- 	config/deploy.yml
+
+- 	config/nginx.conf
+
+- 	config/unicorn.rb
+
+-  	config/unicorn_init.sh
 
 ASSUMPTIONS
 ------------
 
 When usin this scripts, I assume that:
-- You are using ubuntu on your server
-- You are usin nginx for your webserver
-- You are using unicorn as your app server
-- deployer user is able to sudo
+	- You are using ubuntu on your server
+	- You are usin nginx for your webserver
+	- You are using unicorn as your app server
+	- deployer user is able to sudo
 
