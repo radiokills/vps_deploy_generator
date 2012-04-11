@@ -13,12 +13,12 @@ for example:
 `rails generate deploy_configuration  myBlog 70.80.91.101 blog.mydomain.com myUser git@github:./myrepo/myapp`
 
 It will create following files:
-- config/capistrano.rb
-- config/database.example.yml
-- config/deploy.yml
-- config/nginx.conf
-- config/unicorn.rb
-- config/unicorn_init.sh
++ 	config/capistrano.rb
++ 	config/database.example.yml
++ 	config/deploy.yml
++ 	config/nginx.conf
++ 	config/unicorn.rb
++ 	config/unicorn_init.sh
 
 ASSUMPTIONS
 ------------
