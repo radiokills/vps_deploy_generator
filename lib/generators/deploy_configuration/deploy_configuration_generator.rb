@@ -60,7 +60,13 @@ Now you should:
 		
 		ssh #{server_username}@#{app_server}
 		sudo update-rc.d unicorn_#{app_name} defaults
-		}
-		
+	
+	7. Restart nginx
+
+		sudo /etc/init.d/nginx restart
+
+	}
+	
+
 	end
 end
